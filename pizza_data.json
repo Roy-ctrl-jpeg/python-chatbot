@@ -1,0 +1,200 @@
+{
+  "restaurant_info": {
+    "name": "Pizza Hut",
+    "phone": "(123) 456-7890",
+    "address": "123 Main Street, Kuala Lumpur",
+    "website": "pizzahut.com",
+    "hours": {
+      "monday": "11:00 AM - 11:00 PM",
+      "tuesday": "11:00 AM - 11:00 PM",
+      "wednesday": "11:00 AM - 11:00 PM",
+      "thursday": "11:00 AM - 11:00 PM",
+      "friday": "11:00 AM - 12:00 AM",
+      "saturday": "11:00 AM - 12:00 AM",
+      "sunday": "11:00 AM - 11:00 PM"
+    }
+  },
+
+  "menu": {
+    "pizzas": [
+      {
+        "id": "pizza_001",
+        "name": "Margherita",
+        "description": "Fresh tomato sauce, mozzarella cheese, fresh basil",
+        "prices": {"regular": 12, "large": 15, "family": 18},
+        "ingredients": ["tomato sauce", "mozzarella", "basil"],
+        "is_vegetarian": true,
+        "is_available": true,
+        "calories": {"regular": 250, "large": 320, "family": 400}
+      },
+      {
+        "id": "pizza_002",
+        "name": "Pepperoni",
+        "description": "Classic pepperoni with mozzarella cheese",
+        "prices": {"regular": 14, "large": 17, "family": 20},
+        "ingredients": ["tomato sauce", "mozzarella", "pepperoni"],
+        "is_vegetarian": false,
+        "is_available": true,
+        "calories": {"regular": 300, "large": 380, "family": 480}
+      },
+      {
+        "id": "pizza_003",
+        "name": "Hawaiian",
+        "description": "Ham, pineapple, and mozzarella cheese",
+        "prices": {"regular": 15, "large": 18, "family": 21},
+        "ingredients": ["tomato sauce", "mozzarella", "ham", "pineapple"],
+        "is_vegetarian": false,
+        "is_available": true,
+        "calories": {"regular": 280, "large": 360, "family": 450}
+      }
+    ],
+
+    "sides": [
+      {
+        "id": "side_001",
+        "name": "Garlic Bread",
+        "price": 5,
+        "description": "Freshly baked bread with garlic butter",
+        "is_vegetarian": true,
+        "calories": 180
+      },
+      {
+        "id": "side_002",
+        "name": "Chicken Wings",
+        "price": 8,
+        "description": "Crispy chicken wings with choice of sauce",
+        "is_vegetarian": false,
+        "calories": 220,
+        "sauces": ["BBQ", "Buffalo", "Honey Mustard"]
+      }
+    ],
+
+    "drinks": [
+      {
+        "id": "drink_001",
+        "name": "Coca Cola",
+        "price": 3,
+        "sizes": ["regular", "large"],
+        "calories": {"regular": 140, "large": 200}
+      },
+      {
+        "id": "drink_002",
+        "name": "Orange Juice",
+        "price": 4,
+        "sizes": ["regular"],
+        "calories": {"regular": 120}
+      }
+    ]
+  },
+
+  "delivery_zones": [
+    {
+      "area": "KLCC",
+      "delivery_fee": 0,
+      "min_order": 25,
+      "estimated_time": "30-40 minutes"
+    },
+    {
+      "area": "Petaling Jaya",
+      "delivery_fee": 3,
+      "min_order": 20,
+      "estimated_time": "35-45 minutes"
+    },
+    {
+      "area": "Subang Jaya",
+      "delivery_fee": 5,
+      "min_order": 30,
+      "estimated_time": "40-50 minutes"
+    }
+  ],
+
+  "promotions": [
+    {
+      "id": "promo_001",
+      "title": "2 Large Pizzas Deal",
+      "description": "Any 2 Large Pizzas for RM25",
+      "discount_amount": 0,
+      "fixed_price": 25,
+      "conditions": "Must order exactly 2 large pizzas",
+      "valid_until": "2025-12-31",
+      "is_active": true,
+      "day_restrictions": []
+    },
+    {
+      "id": "promo_002",
+      "title": "Wednesday 50% Off",
+      "description": "50% off your 2nd pizza every Wednesday",
+      "discount_percent": 50,
+      "conditions": "Applies to lower-priced pizza",
+      "valid_until": "2025-12-31",
+      "is_active": true,
+      "day_restrictions": ["wednesday"]
+    }
+  ],
+
+  "orders": [
+    {
+      "order_id": "ORD001",
+      "customer_name": "John Doe",
+      "phone": "012-345-6789",
+      "address": "456 Jalan Sultan, KLCC",
+      "items": [
+        {
+          "item_id": "pizza_001",
+          "item_name": "Margherita",
+          "size": "large",
+          "quantity": 2,
+          "unit_price": 15,
+          "total": 30
+        }
+      ],
+      "subtotal": 30,
+      "delivery_fee": 0,
+      "total": 30,
+      "status": "preparing",
+      "order_time": "2025-09-07T14:30:00",
+      "estimated_delivery": "2025-09-07T15:15:00"
+    }
+  ],
+
+  "questions": [
+    {
+      "question": "what pizzas do you have",
+      "answer": "We have Margherita, Pepperoni, Hawaiian, Meat Lovers, and Veggie Supreme. All available in Regular, Large, and Family sizes.",
+      "category": "menu",
+      "added_date": "2025-09-07T10:00:00"
+    },
+    {
+      "question": "how much does delivery cost",
+      "answer": "Delivery fees vary by area: FREE for KLCC (min RM25), RM3 for PJ (min RM20), RM5 for Subang (min RM30).",
+      "category": "delivery",
+      "added_date": "2025-09-07T10:00:00"
+    }
+  ],
+
+  "customer_feedback": [
+    {
+      "order_id": "ORD001",
+      "rating": 5,
+      "comment": "Great pizza, fast delivery!",
+      "feedback_date": "2025-09-07T16:00:00"
+    }
+  ],
+
+  "analytics": {
+    "popular_items": [
+      {"item_id": "pizza_002", "order_count": 45},
+      {"item_id": "pizza_001", "order_count": 38}
+    ],
+    "peak_hours": ["12:00-14:00", "18:00-21:00"],
+    "busiest_days": ["friday", "saturday", "sunday"]
+  },
+
+  "staff_notes": [
+    {
+      "note": "Kitchen equipment maintenance scheduled for Sunday 10 AM",
+      "priority": "high",
+      "date": "2025-09-08"
+    }
+  ]
+}
